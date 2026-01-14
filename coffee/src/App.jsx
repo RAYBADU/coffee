@@ -13,7 +13,7 @@ import { useState } from "react";
 
 const App = () => {
   const [cartItemCount, setCartItemCount] = useState(0);
-  const [loginOpen, setLoginOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false);
 
   const products = [
     {
@@ -49,8 +49,11 @@ const App = () => {
   return (
     <div>
       <Nav cartItemCount={cartItemCount} setLoginOpen={setLoginOpen} />
-        
-      <Hero />
+
+      <div className="max-md:pt-10 max-md:mt-5 md:pt-0 ">
+        <Hero />
+      </div>
+
       <Explore />
 
       <div className="flex overflow-x-auto sm:grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6 space-x-5 px-16 py-10 max-sm:grid-cols-1 max-sm:px-8 bg-neutral-100 scrollbar-hide   ">

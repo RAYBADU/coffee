@@ -1,15 +1,13 @@
 import HeroImage from "../assets/hero-img.png";
 const Hero = () => {
   return (
-    <section className="bg-neutral-100 px-8 py-5 flex items-center justify-center space-x-5 max-md:flex-col max-md:space-y-6 h-screen  max-md:pt-12">
+    <section className="bg-neutral-100 px-8 flex items-center justify-center space-x-5 max-md:flex-col max-md:space-y-2 h-full lg:py-10 py-0 min-h-screen">
       {/* Hero Text */}
-      <div className="max-md:mt-20 max-md:text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium  uppercase text-[#371409] tracking-wider font-[Pacifico] ">
-          Ray’s Coffee 
+      <div className="max-md:mt-10 max-md:text-center">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium  uppercase text-[#371409] tracking-wider font-[Pacifico]">
+          Ray’s Coffee
         </h1>
-        <h2 className="text-2xl max-md:text-xl ">
-          Welcome to Our Coffee Shop
-        </h2>
+        <h2 className="sm:text-xl md:text-2xl ">Welcome to Our Coffee Shop</h2>
         <p className="text-gray-600 mt-4 max-w-lg ">
           Discover the perfect blend of rich coffee and delightful muffins at
           Ray’s Coffee. Start your day with us!
@@ -38,6 +36,13 @@ const Hero = () => {
       {/* Hero Image */}
       <div>
         <img src={HeroImage} alt="Hero Image" className="w-120 max-md:w-90  " />
+      </div>
+
+      {/* toast for cart */}
+      <div
+        className={`fixed bottom-5 right-5 bg-[#371409] text-white  px-4 py-2 rounded-md shadow-inner text-center max-md:text-sm font-semibold`}
+      >
+        Item added to cart
       </div>
     </section>
   );

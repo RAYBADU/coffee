@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ExploreCards = ({ img, color, name, price, setCartItemCount }) => {
+const ExploreCards = ({ img, color, name, price, setCartItemCount}) => {
   const [liked, setLiked] = useState(false);
 
   function cartQuanitity() {
@@ -8,8 +8,8 @@ const ExploreCards = ({ img, color, name, price, setCartItemCount }) => {
   }
 
   return (
-    <div className="bg-neutral-100 w-full shadow-xl rounded-lg mx-auto text-center mt-4 border-t-4 border-yellow-900 p-6 ">
-      <img src={img} alt={name} className="mx-auto h-80" />
+    <div className="bg-neutral-100 w-full h-auto shadow-xl rounded-lg mx-auto text-center mt-4 border-t-4 border-yellow-900 p-6 ">
+      <img src={img} alt={name} className="mx-auto h-40 md:h-64" />
       <h2>{color}</h2>
       <p className="text-xl max-md:text-lg font-medium ">{name}</p>
       <p className="text-lg max-md:text-sm text-gray-600">{price}</p>
@@ -17,7 +17,7 @@ const ExploreCards = ({ img, color, name, price, setCartItemCount }) => {
       <div className="flex justify-between items-center px-4">
         <button
           onClick={cartQuanitity}
-          className="bg-[#371409] text-white px-4 py-2 rounded-lg hover:opacity-[0.9] transition duration-300 cursor-pointer mt-4 max-md:text-xs"
+          className={`bg-[#371409] text-white px-4 py-2 rounded-lg hover:opacity-[0.9] transition duration-300 cursor-pointer mt-4 max-md:text-xs `}
         >
           Add to Cart
         </button>
@@ -34,3 +34,5 @@ const ExploreCards = ({ img, color, name, price, setCartItemCount }) => {
 };
 
 export default ExploreCards;
+
+

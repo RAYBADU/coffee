@@ -2,7 +2,7 @@ import logo from "../assets/coffee cups.png";
 
 const LoginForm = ({ setLoginOpen }) => {
   return (
-    <div className="fixed inset-0 bg-black/40  flex items-center justify-center z-[90] ">
+    <div className="fixed inset-0 bg-black/40  flex items-center justify-center z-[10000] ">
       <div className="bg-white w-[30rem] max-md:w-full max-md:h-screen h-auto rounded-3xl max-md:rounded fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg p-8 border border-gray-300 z-[100] ">
         {/* close-btn */}
 
